@@ -2,7 +2,6 @@
 
 This is an Obsidian plugin that allows you to populate a template with fields from a Jira issue.
 
-
 ![Add jira issue info](./images/add-jira-issue-info.png)
 
 ## Why
@@ -13,7 +12,7 @@ I tend to keep local notes for every ticket I work on - this plugin lets me popu
 
 Right now, this plugin is pretty limited in scope and works for my use case:
 
-- Create a ticket whose name matches a Jira ticket number
+- Create a file whose name matches a Jira ticket number (minus the `.md` extension)
 - Run the `Add Jira issue info` command
     - I have a hotkey assigned for this
 - The template configured in plugin settings will be populated with the contents of the issue
