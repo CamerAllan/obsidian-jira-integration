@@ -34,6 +34,13 @@ A basic template might look like this (note that custom fields are unique to the
 
 `it.link` is a special template field that constructs a link to the UI.
 
+## Installation
+
+Just download the code, unzip it and stick it in your plugins folder. 
+You'll then need to enable it in the community plugins tab.
+
+Only do this after you've reviewed the code - **don't give unfamiliar github plugins your Jira credentials.**
+
 ## Settings
 
 The settings panel for the plugin takes 3 inputs:
