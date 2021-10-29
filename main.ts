@@ -68,8 +68,6 @@ export default class MyPlugin extends Plugin {
 			const hydratedTemplate = await hydrateTemplate(template, issue)
 			if (hydrateTemplate) {
 				file.vault.modify(file, hydratedTemplate as string)
-			} else {
-				console.error("Sadness")
 			}
 		}
 
@@ -87,11 +85,6 @@ export default class MyPlugin extends Plugin {
 				}
 			}
 		});
-
-		// Hook for when a file is renamed
-		this.app.vault.on("rename", async function(file, _oldName) {
-			// Trim .md
-		})
 
 		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
 		let statusBarItemEl = this.addStatusBarItem();
@@ -113,22 +106,6 @@ export default class MyPlugin extends Plugin {
 		await this.saveData(this.settings);
 	}
 
-}
-
-class SampleModal extends Modal {
-	constructor(app: App) {
-		super(app);
-	}
-
-	onOpen() {
-		let {contentEl} = this;
-		contentEl.setText('Woah!');
-	}
-
-	onClose() {
-		let {contentEl} = this;
-		contentEl.empty();
-	}
 }
 
 class SampleSettingTab extends PluginSettingTab {
